@@ -1,39 +1,77 @@
 # loop-skills
 
-Cursor Agent Skills for authoring and running **loop** workflows (stage skills, orchestration, engineering helpers).
+Cursor Agent Skills（ループの著者・実行・ドメイン作業）。
 
 Licensed under the [MIT License](LICENSE).
 
+## Layout
+
+```
+skills/
+  meta/       # スキル／WFを書く工場
+    author-loop-skill/
+    author-loop-workflow/
+  runtime/    # ループを回す基盤
+    loop-engineering/
+    loop-workflow/
+  work/       # ドメインの実作業
+    sector-research-loop/
+    spec-depth-loop/
+    mock-design-loop/
+    demo-app-loop-workflow/
+
+# install 先（どちらか）
+~/.cursor/skills/<name>                 →  skills/{meta|runtime|work}/<name>
+<path/to/workspace>/.cursor/skills/<name> →  同上
+```
+
 ## Skills
+
+### meta
 
 | Skill | Role |
 |-------|------|
-| [`author-loop-skill`](author-loop-skill/) | Author a single-stage loop skill (patterns, templates, inspection) |
-| [`author-loop-workflow`](author-loop-workflow/) | Author a multi-stage loop workflow skill |
-| [`loop-engineering`](loop-engineering/) | Engineering guidance for loop-based work |
-| [`loop-workflow`](loop-workflow/) | Orchestration / stage-exec kernel for loop workflows |
-| [`pipeline-continuity-loop`](pipeline-continuity-loop/) | Cross-stage continuity checks (Spine / gate-log) |
+| [`author-loop-skill`](skills/meta/author-loop-skill/) | 1工程ループスキルの生成 |
+| [`author-loop-workflow`](skills/meta/author-loop-workflow/) | 複数工程ループワークフロースキルの生成 |
 
-ForgOS-specific validation workflows stay in the ForgOS repo and are **not** included here.
+### runtime
+
+| Skill | Role |
+|-------|------|
+| [`loop-engineering`](skills/runtime/loop-engineering/) | 1工程ループの実行ランナー |
+| [`loop-workflow`](skills/runtime/loop-workflow/) | 複数工程の指揮・工程実行 |
+
+### work
+
+| Skill | Role |
+|-------|------|
+| [`sector-research-loop`](skills/work/sector-research-loop/) | 業態調査（sector brief） |
+| [`spec-depth-loop`](skills/work/spec-depth-loop/) | 仕様深度メモ |
+| [`mock-design-loop`](skills/work/mock-design-loop/) | design call（モック方針） |
+| [`demo-app-loop-workflow`](skills/work/demo-app-loop-workflow/) | デモアプリ作成ワークフロー |
+
+### Patterns（`skills/meta/author-loop-skill/patterns/`）
+
+| ID | 出典メモ |
+|----|----------|
+| GV | Andrej Karpathy（Software 3.0 / autoresearch）系の写像 |
+| RGR | Kent Beck の TDD |
+| RALPH | Geoffrey Huntley の Ralph ループ系の写像 |
+| EO | Anthropic *Building Effective Agents* の evaluator-optimizer 系の写像 |
 
 ## Install
 
-Copy one or more skill folders into your personal or project skills directory:
+このリポの `skills/` を、Cursor が読む場所へシンボリックリンクする（コピーしない）。
 
 ```bash
-# personal
-cp -r author-loop-skill ~/.cursor/skills/
+# 個人スキル（全プロジェクトで利用）— 既定
+./scripts/link-skills.sh
 
-# project
-cp -r author-loop-skill /path/to/project/.cursor/skills/
+# 明示的に個人 .cursor
+./scripts/link-skills.sh ~/.cursor
+
+# 特定ワークスペースだけ
+./scripts/link-skills.sh /path/to/workspace
 ```
 
-On Windows (PowerShell):
-
-```powershell
-Copy-Item -Recurse author-loop-skill "$env:USERPROFILE\.cursor\skills\"
-```
-
-## Source
-
-Extracted from ForgOS workspace skills (`loop/` group), with path defaults adjusted for this standalone public repo.
+既存の同名ディレクトリがある場合は確認プロンプトが出る（`-f` で無確認置換）。既にシンボリックリンクなら差し替える。

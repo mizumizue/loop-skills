@@ -1,6 +1,6 @@
 # RGR — Red–Green–Refactor
 
-出典: Kent Beck の TDD。実装スキル化の代表は mattpocock/skills の `/tdd`。
+出典: Kent Beck の TDD（Red–Green–Refactor）。
 
 ## 1周
 

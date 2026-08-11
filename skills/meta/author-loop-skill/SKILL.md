@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # 工程ループスキル工場
 
-専用の1工程ループスキルを書く。`/grilling` と同じく、共有理解の承認前にファイルを書かない。  
+専用の1工程ループスキルを書く。共有理解の承認前にファイルを書かない。  
 生成したら必ず [`INSPECTION.md`](INSPECTION.md) の **A** を通し、パスするまで終わらない。
 
 型カタログ: [`patterns/`](patterns/)（`SELECTING.md` 必須）。  
@@ -26,7 +26,7 @@ disable-model-invocation: true
 5. Stop 条件（上限つき）  
 6. Leash（触ってよい／いけない範囲）  
 7. ペルソナ（既定は空。付けるなら注意の向きだけ）  
-8. 配置（既定: `~/.cursor/skills/<name>/`。このリポから使う場合はリポ直下の `<name>/`）
+8. 配置（既定: `~/.cursor/skills/<name>/`。このリポでは `skills/work/<name>/`）
 
 並行して `patterns/SELECTING.md` で型を内定する。
 

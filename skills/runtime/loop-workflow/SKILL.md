@@ -12,7 +12,7 @@ disable-model-invocation: true
 
 - [`ORCHESTRATION.md`](ORCHESTRATION.md) — 指揮者／作業者  
 - [`STAGE-EXEC.md`](STAGE-EXEC.md) — 実行手段（スキル / loop-eng / ペルソナ空）  
-- [`../author-loop-skill/patterns/SELECTING.md`](../author-loop-skill/patterns/SELECTING.md) — loop-eng 時の型選定  
+- [`../../meta/author-loop-skill/patterns/SELECTING.md`](../../meta/author-loop-skill/patterns/SELECTING.md) — loop-eng 時の型選定  
 
 ## 先導語
 
@@ -62,7 +62,7 @@ disable-model-invocation: true
 
 成果物パスと残リスクを短く報告する。
 
-成果が微妙・失敗のあと工程をさかのぼるときは [`../loop-workflow-audit/SKILL.md`](../loop-workflow-audit/SKILL.md)（`/loop-workflow-audit`）。
+成果が微妙・失敗のあと工程をさかのぼるときは [`../../work/loop-workflow-audit/SKILL.md`](../../work/loop-workflow-audit/SKILL.md)（`/loop-workflow-audit`）。
 
 ## 完了基準
 

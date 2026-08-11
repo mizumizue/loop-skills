@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 1つの仕事を **やって → チェック → 直す** で回す。ユーザーに型名（GV 等）は選ばせない。
 
-型カタログと選定表: [`../author-loop-skill/patterns/`](../author-loop-skill/patterns/)（必ず `SELECTING.md` を読む）。
+型カタログと選定表: [`../../meta/author-loop-skill/patterns/`](../../meta/author-loop-skill/patterns/)（必ず `SELECTING.md` を読む）。
 
 ## 先導語
 

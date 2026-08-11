@@ -11,8 +11,8 @@ disable-model-invocation: true
 
 参照:
 
-- 指揮者: [`../loop-workflow/ORCHESTRATION.md`](../loop-workflow/ORCHESTRATION.md)  
-- 実行手段: [`../loop-workflow/STAGE-EXEC.md`](../loop-workflow/STAGE-EXEC.md)  
+- 指揮者: [`../../runtime/loop-workflow/ORCHESTRATION.md`](../../runtime/loop-workflow/ORCHESTRATION.md)  
+- 実行手段: [`../../runtime/loop-workflow/STAGE-EXEC.md`](../../runtime/loop-workflow/STAGE-EXEC.md)  
 - 型選定: [`../author-loop-skill/patterns/SELECTING.md`](../author-loop-skill/patterns/SELECTING.md)  
 - 検品: [`../author-loop-skill/INSPECTION.md`](../author-loop-skill/INSPECTION.md)  
 - テンプレ: [`templates/workflow-skill.md`](templates/workflow-skill.md)  
@@ -28,7 +28,7 @@ disable-model-invocation: true
 4. 成果物の置き場  
 5. 戻ってよいか（既定: 提案＋一言承認）  
 6. ペルソナ（既定空。視点の指定が明示されたときだけ）  
-7. スキル名・配置（既定: `~/.cursor/skills/<name>/`。このリポから使う場合はリポ直下の `<name>/`）
+7. スキル名・配置（既定: `~/.cursor/skills/<name>/`。このリポでは `skills/work/<name>/`）
 
 実行手段のメニュー（スキルか loop-eng か）は出さない。指揮者が実作業しないことを確認する。
 

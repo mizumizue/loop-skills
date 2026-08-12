@@ -1,7 +1,6 @@
 # loop-skills
 
-Cursor Agent Skills（ループの著者・実行・ドメイン作業）。
-
+Cursor Agent Skills
 Licensed under the [MIT License](LICENSE).
 
 ## Layout
